@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        .payment-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .payment-section h2 {
+            color: #4caf50;
+            margin-top: 0;
+        }
+        .payment-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .payment-section input[type="text"],
+        .payment-section input[type="number"],
+        .payment-section button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .payment-section button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .payment-section button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida dolor ut libero tristique, ut ultricies lectus bibendum. Proin rutrum libero nec massa scelerisque, nec dictum ex ultrices. Nullam quis velit quis odio feugiat volutpat nec a lorem. Donec sit amet sagittis turpis, et ultricies ligula. Proin sit amet purus quis nisi venenatis fermentum.</p>
+        <p>Nulla facilisi. Duis aliquet sapien ac arcu eleifend, nec convallis nunc tempus. Nam venenatis, purus sit amet dignissim ultrices, velit mi condimentum magna, sit amet convallis tellus purus eget justo. Cras pulvinar, ligula sit amet euismod dapibus, dui magna dictum turpis, id congue tellus lacus sit amet nulla.</p>
+        <a href="registration.html" class="cta-button">Register Now</a>
+
+        <!-- GCash Payment Section -->
+        <div class="payment-section">
+            <h2>Make a Payment with GCash</h2>
+            <p>Please enter your details to complete the payment:</p>
+            <form action="process_payment.php" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="amount">Amount (PHP):</label>
+                <input type="number" id="amount" name="amount" min="1" required>
+                
+                <label for="gcash-number">GCash Number:</label>
+                <input type="text" id="gcash-number" name="gcash_number" required>
+                
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
